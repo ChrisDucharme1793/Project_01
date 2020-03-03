@@ -1,35 +1,5 @@
 $(document).ready(function() {
-    $(document).on("click", function(e) {
-        if (e.target.className === "detailsLink") {
-          // console.log(e.target);
-    
-          let id = e.target.id; //id for making premium call
-          let parentEl = e.target.parentElement.parentElement; //element to modify
-          $.ajax({
-            //PREMIUM API CALL for venue details
-            url: `https://api.foursquare.com/v2/venues/${id}?client_id=PGRFNMWYIQORRWIDI35ABOQZAFAB1AGPMHSLQ4DVNNA3FXQ5&client_secret=BFXFR3RHV1PI232XQ3A2FZ45L2K0LB22ZWWLHBLC5OJ3FX1P&v=20180323`,
-            method: "GET"
-          }).then(function(response) {
-            // Expand tooltip to show more info
-            $(parentEl).append(
-              `<p>Price rating: ${response.response.venue.price.currency}</p>`
-            );
-    
-            if (response.response.venue.description !== undefined) {
-              $(parentEl).append(`<p>${response.response.venue.description}</p>`);
-            }
-            if (response.response.venue.contact.formattedPhone !== undefined) {
-              $(parentEl).append(
-                `<p>${response.response.venue.contact.formattedPhone}</p>`
-              );
-            }
-            $(parentEl).append(
-              `<a href="${response.response.venue.url}">${response.response.venue.url}</a>`
-            );
-            $(e.target.parentElement).remove(); // delete 'More details' link
-          });
-        }
-      });
+  
     //adding event listeners
     $("#findBtn").on("click", citySearch);
     $("#searchForm").on("submit", citySearch); // Enables pressing enter to search
@@ -74,8 +44,8 @@ $(document).ready(function() {
             featuresArray.push({
               type: "Feature",
               properties: {
-                description: `<h6><strong>${venue.venue.name}</strong></h6><p>${venue.venue.location.formattedAddress[0]}</p><p>${venue.venue.location.formattedAddress[1]}</p><p><a href="#" id="${venue.venue.id}" class="detailsLink">More details</a></p>`,
-                icon: "marker"
+                description: `<h6><strong>${venue.venue.name}</strong></h6><p>${venue.venue.location.formattedAddress[0]}</p><p>${venue.venue.location.formattedAddress[1]}</p><p><a href="#" id="${venue.venue.id}" class="detailsLink">More details</a></p>`
+                
               },
               geometry: {
                 type: "Point",
@@ -105,7 +75,7 @@ $(document).ready(function() {
               }
             },
             layout: {
-              "icon-image": "{icon}-15",
+              "icon-image": "beer-11",
               "icon-allow-overlap": true,
               "icon-size": 1.5
             }
