@@ -9,7 +9,7 @@ $(document).ready(function() {
       //only run event if search form isn't empty
       $("#cardDiv").hide();
       let city = $("#cityInput").val();
-      const queryURL = `https://api.foursquare.com/v2/venues/explore?client_id=PGRFNMWYIQORRWIDI35ABOQZAFAB1AGPMHSLQ4DVNNA3FXQ5&client_secret=BFXFR3RHV1PI232XQ3A2FZ45L2K0LB22ZWWLHBLC5OJ3FX1P&v=20180323&limit=10&near=${city}&query=food_trucks`;
+      const queryURL = `https://api.foursquare.com/v2/venues/explore?client_id=PGRFNMWYIQORRWIDI35ABOQZAFAB1AGPMHSLQ4DVNNA3FXQ5&client_secret=BFXFR3RHV1PI232XQ3A2FZ45L2K0LB22ZWWLHBLC5OJ3FX1P&v=20180323&limit=10&near=${city}&query=brewery`;
       $.ajax({
         url: queryURL,
         method: "GET"
