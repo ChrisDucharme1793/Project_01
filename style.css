@@ -1,6 +1,96 @@
-/* ---- reset ------ */
 
-/* ---- particles.js container --->  #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b67e18; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
- /* ---- stats.js ---- > .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
 
- 
+
+
+ #canvas-basic{
+    background-color: orange;
+}
+.city {
+    display: inline-block;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+    padding: 3vh;
+  }
+  #cityInput {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 100%;
+    display: block;
+  }
+  #findBtn {
+    margin: auto;
+  }
+  button {
+    padding: 3vh;
+  }
+  #canvas-basic {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+  #content {
+    z-index: 10;
+    position: relative;
+    background-color: white;
+    color: black;
+    width: 200px;
+    height: 300px;
+  }
+  #particles-js {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 50%;
+  }
+  .card {
+    border-radius: 10px;
+  }
+  a {
+    color: rgb(240, 171, 44);
+  }
+  a:hover {
+    color: rgb(240, 171, 44);
+  }
+.title {
+    font-family: 'Playfair Display', serif;;
+    color: seashell;
+    text-shadow: 1px 1px 10px black;
+    font-size:  70px;
+  }
+  .subtitle {
+    font-family: 'Playfair Display', serif;
+    color: seashell;
+    text-shadow: 1px 1px 10px black;
+  }
+  .subtitle2 {
+    font-family: 'Playfair Display', serif;
+    color: seashell;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 10px black;
+  }
+  #map {
+    border-radius: 10px;
+    border: 0.75rem;
+    border-style: solid;
+    border-color: white;
+    width: 60%;
+    margin: 0px auto;
+  }
+  @media only screen and (max-width: 600px) {
+    #map {
+      width: 100%;
+    }
+    .city {
+      width: 90%;
+    }
+  }
