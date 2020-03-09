@@ -1,10 +1,8 @@
-
-
-
-
  #canvas-basic{
     background-color: orange;
 }
+
+
 .city {
     display: inline-block;
     align-content: center;
@@ -38,11 +36,16 @@
     left: 0;
     z-index: -9999;
   }
+
+  #venue_list{
+    margin-top: 20px;
+  }
+
   #content {
     z-index: 10;
     position: relative;
     background-color: white;
-    color: black;
+    color: white;
     width: 200px;
     height: 300px;
   }
@@ -54,6 +57,7 @@
   }
   .card {
     border-radius: 10px;
+    background-color: cornsilk;
   }
   a {
     color: rgb(240, 171, 44);
@@ -63,18 +67,19 @@
   }
 .title {
     font-family: 'Playfair Display', serif;;
-    color: seashell;
+    color:white;
     text-shadow: 1px 1px 10px black;
     font-size:  70px;
+    
   }
   .subtitle {
     font-family: 'Playfair Display', serif;
-    color: seashell;
+    color:white;
     text-shadow: 1px 1px 10px black;
   }
   .subtitle2 {
     font-family: 'Playfair Display', serif;
-    color: seashell;
+    color:white;
     font-size: 1.5em;
     text-shadow: 1px 1px 10px black;
   }
@@ -93,14 +98,39 @@
     .city {
       width: 90%;
     }
-      .title{
-        font-size: 50px;
-     
-    }
-    @media only screen and (max-width: 400px){
-    .title{
-        font-size: 40px;
-    }
+
 }
-  
+#list_view, #map_view{
+  align-content: center;
+}
+#view_buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#venue_list{
+font-size: 10px;
+  text-align: center;
+}
+
+.card-content {
+  float: left;
+  align-content: stretch;
+  font-size: 15px;
+  width: 30%;
+  background-color: cornsilk;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 25px;
+    
+    font-size: 2em;
+  -webkit-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+  -moz-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+  box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
   }
+
+
+
+
