@@ -104,3 +104,35 @@
 }
   
   }
+#list_view, #map_view{
+  align-content: center;
+}
+#view_buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#venue_list{
+font-size: 10px;
+  text-align: center;
+}
+
+.card-content {
+  float: left;
+  align-content: stretch;
+  font-size: 15px;
+  width: 30%;
+  background-color: cornsilk;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 25px;
+    font-size: 2em;
+  -webkit-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+  -moz-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+  box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+  }
+
+
+
