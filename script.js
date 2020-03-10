@@ -6,19 +6,35 @@ $(document).ready(function () {
   $('#list_view').on('click', hideMap);
 
 
-
-
-  function hideMap() {
+ function hideMap() {
     // $('#map').addClass('hide');
-    $("#venue_list").toggle("hide");
-    // $('#map').addClass('hide');
+    // $("#venue_list").toggle("hide");
+
+    if ($("#list_view").text() == "HIDE LIST") {
+      $("#venue_list").hide();
+      $("#list_view").text("SHOW LIST");
+    }
+    else {
+      $("#venue_list").show();
+      $("#list_view").text("HIDE LIST");
+
+    }
   }
 
   function hideList() {
-    $('#map').toggle("hide");
-    // $('#venue_list').addClass('hide');
-    // $('#venue_list').addClass('hide');
+    if ($("#map_view").text() == "HIDE MAP") {
+      $("#map").hide();
+      $("#map_view").text("SHOW MAP");
+    }
+    else {
+      $("#map").show();
+      $("#map_view").text("HIDE MAP");
+
+    }
+
   }
+
+
 
   /**
    * Function that searches for the city specified
